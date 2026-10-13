@@ -1,0 +1,45 @@
+$ git init
+Initialized empty Git repository
+$ git status --short
+?? compras.md
+$ git commit -m "docs: crea lista de compras"
+$ git diff
++++ b/compras.md
+@@ -1 +1,2 @@
+ # Lista de compras
++- pan
+$ git log --oneline
+6b6a673 docs: agrega pan a la lista
+83b4f76 docs: crea lista de compras
+$ git restore compras.md && cat compras.md
+# Lista de compras
+- pan
+--- Reto extra: rama ideas
+$ git log --oneline --graph
+* 536b806 docs: agrega café
+* 6b6a673 docs: agrega pan a la lista
+* 83b4f76 docs: crea lista de compras
+
+=== CLASE 2 · conflicto controlado ===
+$ git merge feature/estado
+Auto-merging estado.md
+CONFLICT (content): Merge conflict in estado.md
+Automatic merge failed; fix conflicts and then commit the result.
+$ git status --short
+UU estado.md
+$ cat estado.md
+<<<<<<< HEAD
+Estado: en desarrollo (versión 0.2)
+=======
+Estado: listo para pruebas
+>>>>>>> feature/estado
+$ git log --oneline --graph --all
+*   d54a635 merge: combina estado y versión
+|\  
+| * 3eadb1f docs: marca listo para pruebas
+* | e78b396 docs: indica versión 0.2
+|/  
+* 0444d2c docs: agrega estado del proyecto
+* 536b806 docs: agrega café
+* 6b6a673 docs: agrega pan a la lista
+* 83b4f76 docs: crea lista de compras
