@@ -48,6 +48,13 @@ class GestorTareas:
             raise ValueError(f"Prioridad inválida: {prioridad}")
         return [t for t in self._tareas if t.prioridad == prioridad]
 
+    def buscar_texto(self, texto):
+        """TF-9: tareas cuyo título contiene el texto (ignora mayúsculas)."""
+        texto = texto.strip().lower()
+        if not texto:
+            raise ValueError("El texto de búsqueda no puede estar vacío")
+        return [t for t in self._tareas if texto in t.titulo.lower()]
+
     def eliminar(self, tarea_id):
         tarea = self.buscar(tarea_id)   # lanza KeyError si no existe
         self._tareas.remove(tarea)
