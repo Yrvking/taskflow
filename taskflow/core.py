@@ -42,6 +42,12 @@ class GestorTareas:
             return [t for t in self._tareas if not t.completada]
         return list(self._tareas)
 
+    def filtrar_por_prioridad(self, prioridad):
+        """TF-8: tareas con la prioridad indicada, en orden de creación."""
+        if prioridad not in PRIORIDADES:
+            raise ValueError(f"Prioridad inválida: {prioridad}")
+        return [t for t in self._tareas if t.prioridad == prioridad]
+
     def eliminar(self, tarea_id):
         tarea = self.buscar(tarea_id)   # lanza KeyError si no existe
         self._tareas.remove(tarea)

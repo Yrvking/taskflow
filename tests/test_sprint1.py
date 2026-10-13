@@ -17,3 +17,18 @@ def gestor():
 def test_no_permite_titulos_duplicados(gestor):
     with pytest.raises(ValueError):
         gestor.agregar("  preparar DEMO ")
+
+
+# TF-8 Filtrar por prioridad
+def test_filtrar_por_prioridad(gestor):
+    titulos = [t.titulo for t in gestor.filtrar_por_prioridad("alta")]
+    assert titulos == ["Preparar demo", "Revisar PR de la pareja"]
+
+
+def test_filtrar_prioridad_sin_resultados(gestor):
+    assert gestor.filtrar_por_prioridad("baja") == []
+
+
+def test_filtrar_prioridad_invalida(gestor):
+    with pytest.raises(ValueError):
+        gestor.filtrar_por_prioridad("urgente")
