@@ -1,0 +1,68 @@
+Issue ID,Issue Type,Summary,Description,Story point estimate,Parent
+1,Epic,Gestión de tareas,"Funcionalidades para crear, organizar y encontrar tareas.",,
+2,Epic,Calidad y automatización,"CI/CD, pruebas automáticas y calidad del código.",,
+3,Epic,Visibilidad del proyecto,Avance visible para usuarios y coordinación.,,
+4,Story,"Agregar, completar y listar tareas con prioridad","Como usuario quiero agregar tareas con prioridad, completarlas y listar las pendientes para organizar mi trabajo.
+
+Criterios:
+DADO un gestor vacío CUANDO agrego dos tareas ENTONCES reciben ids 1 y 2.
+DADO un título vacío o una prioridad inválida CUANDO agrego ENTONCES se lanza ValueError.
+
+Sprint 0 (Hito 1).",3,1
+5,Story,Eliminar tareas por id,"Como usuario quiero eliminar una tarea por su id para mantener limpia mi lista.
+
+Criterios:
+DADO las tareas 1 y 2 CUANDO elimino la 1 ENTONCES solo queda la 2.
+DADO que eliminé la tarea 1 CUANDO agrego otra ENTONCES recibe el id 2 (no se reutilizan ids).
+DADO un id inexistente CUANDO elimino ENTONCES se lanza KeyError.
+
+Sprint 0 (Hito 2, PR #3).",2,1
+6,Task,Pipeline de CI con pruebas en 3 versiones de Python,"Workflow ci.yml con matrix 3.11, 3.12 y 3.13 en cada PR y push a main. Checks requeridos en el ruleset proteger-main.
+
+Sprint 0 (Hito 2, PR #2).",3,2
+7,Task,Publicar el sitio del proyecto en GitHub Pages,"Workflow deploy.yml: test -> deploy a Pages en cada merge a main.
+
+Sprint 0 (Hito 2, PR #4).",3,3
+8,Story,Filtrar tareas por prioridad,"Como usuario de TaskFlow quiero filtrar mis tareas por prioridad para atender primero lo urgente.
+
+Criterios:
+DADO tareas de prioridad alta y media CUANDO filtro por ""alta"" ENTONCES veo solo las de prioridad alta, en orden de creación.
+DADO una prioridad sin tareas CUANDO filtro ENTONCES obtengo una lista vacía.
+DADO cualquier lista CUANDO filtro por ""urgente"" ENTONCES el sistema indica que la prioridad no es válida (ValueError).",3,1
+9,Story,Buscar tareas por texto,"Como usuario quiero buscar tareas por una palabra del título para encontrarlas sin recorrer toda la lista.
+
+Criterios:
+DADO ""Escribir README"" y ""Preparar demo"" CUANDO busco ""readme"" ENTONCES veo solo ""Escribir README"" (ignora mayúsculas).
+DADO cualquier lista CUANDO busco un texto vacío o solo espacios ENTONCES se indica que debo escribir un texto (ValueError).",3,1
+10,Story,"Resumen de avance (total, completadas, pendientes, %)","Como usuario quiero ver cuántas tareas llevo completadas y el porcentaje de avance para saber cómo voy.
+
+Criterios:
+DADO 3 tareas con 1 completada CUANDO pido el resumen ENTONCES obtengo total 3, completadas 1, pendientes 2, avance 33.
+DADO que no hay tareas CUANDO pido el resumen ENTONCES el avance es 0 (sin error de división).",5,3
+11,Bug,Se aceptan tareas con títulos duplicados,"Pasos para reproducir:
+1. gestor.agregar(""Preparar demo"")
+2. gestor.agregar(""preparar demo "")
+Resultado actual: se crean dos tareas con el mismo título.
+Resultado esperado: la segunda llamada lanza ValueError.
+
+Criterios:
+- DADO que existe ""Preparar demo"" CUANDO agrego ""  preparar DEMO "" ENTONCES se rechaza con ValueError.
+- La comparación ignora mayúsculas y espacios al inicio y al final.",2,1
+12,Story,Mostrar el avance del proyecto en el sitio web,"Como coordinadora quiero ver el avance en la página del proyecto para no tener que abrir el código.
+
+Criterios:
+DADO un merge a main CUANDO termina el deploy ENTONCES el sitio muestra el estado de los hitos y del sprint.
+
+Backlog (opcional).",5,3
+13,Task,Agregar lint con Ruff al CI,"Job lint con ruff check . y test con needs: lint. Actualizar checks requeridos del ruleset.
+
+Backlog (opcional).",2,2
+14,Story,Guardar las tareas en un archivo JSON,"Como usuario quiero que mis tareas se guarden en un archivo y se recuperen al reiniciar para no perderlas.
+
+Criterios:
+DADO tareas creadas CUANDO guardo y vuelvo a cargar ENTONCES obtengo las mismas tareas e ids.
+DADO un archivo dañado CUANDO cargo ENTONCES se informa el error sin perder datos.
+
+Backlog.",8,1
+15,Task,"Cierre del Sprint 1: review, retrospectiva y release v1.0.0","Demo actualizada, sitio con Hito 3, README final con retro, capturas en docs/evidencias y release v1.0.0.",1,3
+16,Task,Acción de retro: revisar PRs cada mañana antes de programar,Acción acordada en la retrospectiva del Sprint 1 para evitar acumular PRs en In Review.,1,2
