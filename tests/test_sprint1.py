@@ -32,3 +32,13 @@ def test_filtrar_prioridad_sin_resultados(gestor):
 def test_filtrar_prioridad_invalida(gestor):
     with pytest.raises(ValueError):
         gestor.filtrar_por_prioridad("urgente")
+
+
+# TF-9 Buscar por texto
+def test_buscar_texto_ignora_mayusculas(gestor):
+    assert [t.id for t in gestor.buscar_texto("readme")] == [2]
+
+
+def test_buscar_texto_vacio(gestor):
+    with pytest.raises(ValueError):
+        gestor.buscar_texto("  ")
