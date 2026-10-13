@@ -1,4 +1,4 @@
-# TaskFlow
+# TaskFlow  ![CI](https://github.com/Yrvking/taskflow/actions/workflows/ci.yml/badge.svg)
 
 Gestor de tareas en Python · Proyecto integrador del curso **DevOps & Project Management**.
 
