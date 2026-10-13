@@ -42,3 +42,13 @@ def test_buscar_texto_ignora_mayusculas(gestor):
 def test_buscar_texto_vacio(gestor):
     with pytest.raises(ValueError):
         gestor.buscar_texto("  ")
+
+
+# TF-10 Resumen de avance
+def test_resumen(gestor):
+    gestor.completar(1)
+    assert gestor.resumen() == {"total": 3, "completadas": 1, "pendientes": 2, "avance": 33}
+
+
+def test_resumen_sin_tareas():
+    assert GestorTareas().resumen()["avance"] == 0
