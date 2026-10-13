@@ -2,4 +2,4 @@
 from .core import PRIORIDADES, GestorTareas, Tarea
 
 __all__ = ["GestorTareas", "Tarea", "PRIORIDADES"]
-__version__ = "0.1.0"
+__version__ = "1.0.0"
