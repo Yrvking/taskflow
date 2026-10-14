@@ -7,7 +7,7 @@ Sitio: https://yrvking.github.io/taskflow/ · Jira: https://yrving333.atlassian.
 ## Equipo
 
 - Yrving Leon — @Yrvking (yrvingleon@hotmail.com)
-- Pareja de revisión: @usuario-pareja
+- Modalidad: trabajo individual (sin pareja de revisión)
 
 ## Funcionalidades (con la clave de Jira de cada una)
 
@@ -34,7 +34,7 @@ python -m pytest -v              # 17 passed
 
 - Estrategia: GitHub Flow · merge: squash · `main` protegida (ruleset `proteger-main`)
 - Convenciones: ramas `tipo/TF-n-descripcion`, Conventional Commits, PRs con plantilla
-- Ruleset: PR obligatorio, aprobación, checks `test (3.11)`, `test (3.12)`, `test (3.13)` requeridos y actualizados, sin force push ni borrado
+- Ruleset: PR obligatorio (0 aprobaciones requeridas por trabajo individual, como indica la Clase 2), checks `test (3.11)`, `test (3.12)`, `test (3.13)` requeridos y actualizados, sin force push ni borrado
 
 ## CI/CD
 
