@@ -2,7 +2,7 @@
 
 Gestor de tareas en Python · Proyecto integrador DevOps & Project Management.
 
-Sitio: https://yrvking.github.io/taskflow/ · Jira: https://yrvingleon-devops.atlassian.net (proyecto TF)
+Sitio: https://yrvking.github.io/taskflow/ · Jira: https://yrving333.atlassian.net (proyecto TF)
 
 ## Equipo
 
@@ -53,17 +53,18 @@ python -m pytest -v              # 17 passed
 
 | PR | Título | Jira |
 |----|--------|------|
-| [#1](https://github.com/Yrvking/taskflow/pull/1) | docs: agrega plantilla de pull request | — |
-| [#2](https://github.com/Yrvking/taskflow/pull/2) | ci: ejecuta pruebas en cada pull request | TF-6 |
-| [#3](https://github.com/Yrvking/taskflow/pull/3) | feat: permite eliminar tareas por id | TF-5 |
-| [#4](https://github.com/Yrvking/taskflow/pull/4) | ci: publica el sitio del proyecto en GitHub Pages | TF-7 |
-| [#5](https://github.com/Yrvking/taskflow/pull/5) | docs: marca el Hito 2 como completo | — |
-| [#6](https://github.com/Yrvking/taskflow/pull/6) | docs: actividades de clase y backlog de Jira | — |
-| [#7](https://github.com/Yrvking/taskflow/pull/7) | TF-11 fix: rechaza títulos duplicados | TF-11 |
-| [#8](https://github.com/Yrvking/taskflow/pull/8) | TF-8 feat: filtrar tareas por prioridad | TF-8 |
-| [#9](https://github.com/Yrvking/taskflow/pull/9) | TF-9 feat: buscar tareas por texto | TF-9 |
-| [#10](https://github.com/Yrvking/taskflow/pull/10) | TF-10 feat: resumen de avance | TF-10 |
-| [#11](https://github.com/Yrvking/taskflow/pull/11) | TF-15 docs: cierre del Sprint 1 y versión 1.0.0 | TF-15 |
+| [#2](https://github.com/Yrvking/taskflow/pull/2) | docs: describe el proyecto en el README | — |
+| [#3](https://github.com/Yrvking/taskflow/pull/3) | docs: agrega plantilla de pull request | — |
+| [#4](https://github.com/Yrvking/taskflow/pull/4) | ci: ejecuta pruebas en cada pull request | TF-6 |
+| [#5](https://github.com/Yrvking/taskflow/pull/5) | feat: permite eliminar tareas por id | TF-5 |
+| [#6](https://github.com/Yrvking/taskflow/pull/6) | ci: publica el sitio del proyecto en GitHub Pages | TF-7 |
+| [#7](https://github.com/Yrvking/taskflow/pull/7) | docs: marca el Hito 2 como completo y agrega evidencias | — |
+| [#8](https://github.com/Yrvking/taskflow/pull/8) | docs: actividades de clase y backlog de Jira | — |
+| [#9](https://github.com/Yrvking/taskflow/pull/9) | TF-11 fix: rechaza tareas con títulos duplicados | TF-11 |
+| [#10](https://github.com/Yrvking/taskflow/pull/10) | TF-8 feat: filtrar tareas por prioridad | TF-8 |
+| [#11](https://github.com/Yrvking/taskflow/pull/11) | TF-9 feat: buscar tareas por texto | TF-9 |
+| [#12](https://github.com/Yrvking/taskflow/pull/12) | TF-10 feat: resumen de avance | TF-10 |
+| [#13](https://github.com/Yrvking/taskflow/pull/13) | TF-15 docs: cierre del Sprint 1 y versión 1.0.0 | TF-15 |
 
 - Workflows: https://github.com/Yrvking/taskflow/actions
 - Releases: [v0.2.0](https://github.com/Yrvking/taskflow/releases/tag/v0.2.0) · [v1.0.0](https://github.com/Yrvking/taskflow/releases/tag/v1.0.0)

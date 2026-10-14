@@ -5,7 +5,7 @@ Cuenta: yrvingleon@hotmail.com · GitHub: @Yrvking · Clave del proyecto: **TF**
 ## 1. Sitio y proyecto
 
 1. Entra a <https://www.atlassian.com/software/jira/free> y usa **Continuar con GitHub** (cuenta Yrvking) o el correo yrvingleon@hotmail.com.
-2. Nombre del sitio sugerido: `yrvingleon-devops.atlassian.net`.
+2. Nombre del sitio sugerido: `yrving333.atlassian.net`.
 3. **Crear proyecto → Desarrollo de software → Scrum → Team-managed**. Nombre `TaskFlow`, clave `TF`.
 4. **Board → … → Configurar tablero**: columnas `To Do → In Progress → In Review → Done` (crea `In Review` con categoría *En curso*).
 5. Verifica que las historias tengan el campo **Story point estimate**.
